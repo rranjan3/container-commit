@@ -5,8 +5,9 @@ Steps
  1. Run ``docker-compose up -d``
  2. Run ``docker images | grep test``. You will see an image named ``test`` with tag as ``latest``
  3. Run ``docker ps`` to find the container id of the running container 
- 4. Run ``docker commit <<container_id>> test:v2``. This would create another image test:v2.
-     Verify this by running ``docker images | grep test``
+ 4. Run ``docker commit <<container_id>> test:v2``. Here ``<<container_id>>`` would be the one you got from step 3. 
+    This would create another image ``test:v2``.
+    Verify this by running ``docker images | grep test``
  5. Run ``docker-compose down`` to stop the container spawned using image ``test:latest``
  6. Check the numver in myfile using ``cat myfile``. Note the number.
  7. Delete this file now ``rm myfile``
