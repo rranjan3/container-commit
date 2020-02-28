@@ -1,0 +1,18 @@
+version: '3.5'
+
+services:
+  test:
+    container_name: test
+    image: test
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/project
+    command: |
+      bash -c "
+        python3 test_commit.py
+        tail -f /dev/null
+      "
+    stop_signal: SIGKILL
+
