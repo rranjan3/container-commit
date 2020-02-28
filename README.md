@@ -15,6 +15,5 @@ Steps
 
 The program starts from 0 and after every 5 seconds write to 2 files - one inside docker and another in the mapped volume. It writes the same number to both the files. Before writing it tries to read the file that is only inside the container. If the file does not exist, it reads as 0 and starts incrementing from there.
 
-When we start using the second image, we observe that it starts from where the first container left. This shows that docker's commit command does infact work.  
-
+When we start using the second image, we observe that it starts from where the first container left. This shows that [docker's commit](https://docs.docker.com/engine/reference/commandline/commit/) command does infact work.  
 
